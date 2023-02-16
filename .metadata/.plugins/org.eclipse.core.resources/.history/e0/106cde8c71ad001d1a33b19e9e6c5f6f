@@ -1,0 +1,21 @@
+package classe;
+
+public class produto {
+	String nome;
+	double preco;
+	double preco_com_desconto;
+	static double desconto = 0.25;
+	produto(String nome_produto,double preco_do_produto){
+		nome=nome_produto;
+		preco = preco_do_produto;
+		preco_com_desconto = preco_do_produto*(1-desconto);
+	}
+	produto(String nome_produto,double preco_do_produto,double desconto_opcional){
+		nome=nome_produto;
+		preco = preco_do_produto;
+		preco_com_desconto = preco_do_produto*(1-desconto_opcional);
+	}
+	String apresentar() {
+		
+	}
+}

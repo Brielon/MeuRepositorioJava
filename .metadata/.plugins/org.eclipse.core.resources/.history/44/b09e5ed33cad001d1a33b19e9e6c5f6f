@@ -1,0 +1,15 @@
+package classe;
+
+public class DataTeste {
+public static void main(String[] args) {
+	Data data1 = new Data();
+	Data data2 = new Data();
+	data1.dia = "Terca-feira";
+	data1.mes = "marco";
+	data1.ano = 2011;
+	data2.dia = "segunda-feira";
+	data2.mes = "novembro";
+	data2.ano = 2000;
+	
+}
+}

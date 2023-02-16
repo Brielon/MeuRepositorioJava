@@ -1,0 +1,11 @@
+package classe;
+
+public class ProdutoTeste {
+	public static void main(String[] args) {
+		produto n1 = new produto();
+		n1.nome = "Carro";
+		n1.preco = 9_000.00;
+		n1.desconto = 0.5;
+		System.out.print(n1.nome+"\nTem o preco de R$"+n1.preco+".\nporen com o desconto o valor final fica em R$"+n1.PrecoComDesconto()); 
+	}
+}

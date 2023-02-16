@@ -1,0 +1,17 @@
+package controle;
+
+import java.util.Scanner;
+
+public class WhileIndeterminado {
+	public static void main(String[] args) {
+		System.out.println("Escreva: ");
+		Scanner entrada = new Scanner(System.in);
+		String texto = "";
+		String atual = "";
+		for (;!(atual.contains("sair"));) {
+			atual = entrada.nextLine();
+			texto += atual;
+			atual = atual.toLowerCase();
+		}
+	}
+}

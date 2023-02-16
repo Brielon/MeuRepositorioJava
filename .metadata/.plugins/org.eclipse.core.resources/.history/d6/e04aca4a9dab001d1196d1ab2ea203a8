@@ -1,0 +1,38 @@
+package fundamentos;
+
+import java.util.Scanner;
+
+public class DesafioModulo {
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Informe o primeiro numero: ");
+		Double primeiro_numero = entrada.nextDouble();
+		System.out.println("Informe o segundo numero: ");
+		Double segundo_numero = entrada.nextDouble();
+		System.out.println("Informe a conta \"/, *, +, -, %\" ");
+		String conta = entrada.next();
+		double _resposta = 0;
+		boolean adicao = conta.contains("+"),
+				subtracao = conta.contains("-"),
+				divisao = conta.contains("/"),
+				multiplicacao = conta.contains("*"),
+				resto_divisao = conta.contains("%"),
+				AdicaoOuSubtracao = adicao ^ subtracao,
+				DivisaoOuMultiplicacao = divisao ^ multiplicacao;
+		_resposta = AdicaoOuSubtracao ? 
+				 adicao ? primeiro_numero + segundo_numero :
+					 primeiro_numero - segundo_numero : 
+						 DivisaoOuMultiplicacao ? 
+								 divisao ? primeiro_numero / segundo_numero : 
+									 primeiro_numero * segundo_numero :
+										 primeiro_numero % segundo_numero;
+		//adicao ? resposta = primeiro_numero + segundo_numero;
+	//	subtracao?resposta = primeiro_numero - segundo_numero:
+	//	divisao?resposta = primeiro_numero / segundo_numero:
+	//	multiplicacao?resposta = primeiro_numero * segundo_numero:
+	//	resto_divisao?resposta = primeiro_numero % segundo_numero:resposta=0;
+		
+		System.out.println(_resposta);
+		entrada.close();
+	}
+}

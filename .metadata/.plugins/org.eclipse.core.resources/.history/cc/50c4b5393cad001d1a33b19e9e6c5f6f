@@ -1,0 +1,8 @@
+package classe;
+
+public class DataTeste {
+	Data data1 = new Data();
+	Data data2 = new Data();
+	data1.dia = "Terca-feira";
+	data1.
+}

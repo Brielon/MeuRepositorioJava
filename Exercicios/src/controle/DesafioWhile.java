@@ -1,0 +1,49 @@
+package controle;
+
+import java.util.Scanner;
+
+public class DesafioWhile {
+	public static void main(String[] args) {
+		/*double contador = 3;
+		Scanner entrada = new Scanner(System.in);
+		double nota = 0.0;
+		String ERRO = "Nota invalida\nPor favor de uma nota de 0 a 10 ou -1 para sair";
+		do {
+		System.out.printf("Informe a nota 0-10 numero: %.0f(-1 p/ sair)\n",contador);
+		contador++;
+		nota = entrada.nextDouble();
+		String resposta = nota < 0 || nota > 10 || nota != -1 ? ERRO : 
+			nota == -1 ? "saindo" : 
+				"Nota adicionada com sucesso";
+		if(resposta.equals(ERRO))
+			contador--;
+		}while(nota != -1);
+		System.out.printf("A media da turma e de %.2f",nota/contador);
+	entrada.close();
+	*/
+		boolean NotaIncorreta;
+		double NotaAtual = 0,
+				SomaNotas = 0;
+		int contar = 0;
+		Scanner entra = new Scanner(System.in);
+		while(NotaAtual != -1) {
+			contar++;
+			System.out.println("Informe uma nota 0-10");
+			NotaAtual = entra.nextDouble();
+			NotaIncorreta = NotaAtual > 10 || NotaAtual < 0;
+			SomaNotas += NotaAtual == -1? 0 :
+				NotaIncorreta ? 0 :
+					NotaAtual;
+			contar += NotaIncorreta ? -1 : 0;
+			String mensagem = NotaAtual == -1 ?
+					"A media e: ":
+						NotaIncorreta ?
+					"A nota esta incorreta\n":
+						"Nota gravada com sucesso\n";
+			System.out.print(mensagem);
+			}
+		double resposta = SomaNotas/contar; 
+		System.out.printf("%.2f",resposta);
+	}
+	
+}

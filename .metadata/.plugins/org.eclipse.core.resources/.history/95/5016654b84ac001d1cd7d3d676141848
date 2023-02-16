@@ -1,0 +1,31 @@
+package controle;
+
+import java.util.Scanner;
+
+public class Ex006 {
+	public static void main(String[] args) {
+		//6. Jogo da adivinhação: Tentar adivinhar um número entre 0 - 100.
+		//Armazene um numero aleatório em uma variável. O Jogador tem 10 
+		//tentativas para adivinhar o número gerado. Ao final de cada tentativa, 
+		//imprima a quantidade de tentativas restantes, e imprima 
+		//se o número inserido é maior ou menor do que o número armazenado.
+		var numero_aleatorio = 100;
+		Scanner entra = new Scanner(System.in);
+		System.out.println("Tente adivinhar o numero: ");
+		for(int tentativas = 10 ; tentativas>=0 ; tentativas-- ) {
+			int numero = entra.nextInt();
+			String mensagen = numero==numero_aleatorio?
+					"Parabens voce acertou o numero":"Voce errou tente novamente";
+			boolean continuar = mensagen.equals("Voce errou tente novamente");
+			if(!continuar) {
+				System.out.println(mensagen);
+				break;
+			}else {
+				System.out.println(mensagen);
+				System.out.println(numero>numero_aleatorio?
+						"O numero que esta procurando e maior":
+							"O numero que esta procurando e menor");
+			}
+		}
+	}
+}

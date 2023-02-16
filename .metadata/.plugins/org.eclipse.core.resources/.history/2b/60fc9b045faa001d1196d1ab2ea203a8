@@ -1,0 +1,13 @@
+package fundamentos;
+
+public class DesafioLogicos {
+	public static void main(String[] args) {
+		//trabalho na terça e na quinta 
+		//1 trabalho tv 32
+		//2 trabalhos tv 51
+		String primeiro = "teste",segundo = "teste";
+		String texto = String.format("O primeiro trabalho deu %s e o segundo trabalho %s"
+				,primeiro,segundo);
+		texto = texto.concat("teste");
+	}
+}

@@ -1,0 +1,24 @@
+package controle;
+
+import java.util.Scanner;
+
+public class DesafioWhile {
+	public static void main(String[] args) {
+		double contador = 1;
+		Scanner entrada = new Scanner(System.in);
+		double nota = 0.0;
+		String ERRO = "Nota invalida\nPor favor de uma nota de 0 a 10 ou -1 para sair";
+		do {
+		System.out.printf("Informe a nota 0-10 numero: %.0f(-1 p/ sair)\n",contador++);
+		nota = entrada.nextDouble();
+		String resposta = nota < 0 || nota > 10 || nota != -1 ? ERRO : 
+			nota == -1 ? "saindo" : 
+				"Nota adicionada com sucesso";
+		if(resposta.equals(ERRO))
+			contador--;
+		}while(nota != -1);
+		System.out.printf("A media da turma e de %.2f",nota/contador);
+	entrada.close();
+	}
+	
+}

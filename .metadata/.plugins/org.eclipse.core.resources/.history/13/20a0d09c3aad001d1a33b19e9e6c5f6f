@@ -1,0 +1,9 @@
+package classe;
+
+public class produto {
+	String nome;
+	double preco;
+	double desconto;
+	double precoF = (preco*(desconto-1));
+	
+}

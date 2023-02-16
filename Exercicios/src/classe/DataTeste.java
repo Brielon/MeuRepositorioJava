@@ -1,0 +1,14 @@
+package classe;
+
+public class DataTeste {
+public static void main(String[] args) {
+	Data data1 = new Data(11,7,2011);
+	Data data2 = new Data(20,11,2000);
+	Data data3 = new Data();
+
+	System.out.println(data1.DataF());
+	System.out.println(data2.DataF()); 
+	System.out.println(data3.DataF()); 
+}
+}
+ 
