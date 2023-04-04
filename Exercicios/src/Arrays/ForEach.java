@@ -1,12 +1,21 @@
 package Arrays;
 
+import java.util.Scanner;
+
 import javax.annotation.processing.SupportedSourceVersion;
 
 public class ForEach {
 	public static void main(String[] args) {
-		double[] notas = {6,6,9,8,52,4,4};
-		for(double nota_atual : notas) {
-			System.out.println(nota_atual);
-		}
+		Scanner entrada = new Scanner(System.in);
+		double[] notas = new double[5];
+	//for(double nota : notas) {
+		//nota = entrada.nextDouble();//for each n pode ser usado para entrada pois aponta para uma copia e nao para o objeto
+	//}
+	for(int i = 0; i<notas.length;notas[(++i)-1] = entrada.nextDouble());
+	for(double nota : notas) {
+		System.out.println(nota); 
 	}
+	
+	} 
+	
 }

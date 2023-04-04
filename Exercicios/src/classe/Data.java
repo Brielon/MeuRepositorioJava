@@ -12,7 +12,7 @@ public class Data {
 	}
 	Data(int dia,int mes,int ano){ 
 		this.dia = dia;//referenciar funçao atual
-		this.mes = mes;//
+		this.mes = mes;// 
 		this.ano = ano;
 		//this(dia,mes,ano);==Data(dia,mes,ano);
 

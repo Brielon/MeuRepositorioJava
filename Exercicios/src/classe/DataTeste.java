@@ -8,7 +8,7 @@ public static void main(String[] args) {
 
 	System.out.println(data1.DataF());
 	System.out.println(data2.DataF()); 
-	System.out.println(data3.DataF()); 
+	System.out.println(data3.DataF());  
 }
 }
  
